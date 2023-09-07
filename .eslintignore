@@ -14,6 +14,7 @@ yarn-error.log
 .eslintignore
 .editorconfig
 .gitignore
+.prettierrc
 .prettierignore
 .eslintcache
 *.lock
