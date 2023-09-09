@@ -1,5 +1,10 @@
 import React, {FC, useEffect, useState} from 'react';
+import {withExpoSnack} from 'nativewind';
 import {View, Text} from 'react-native';
+import {styled} from 'nativewind';
+
+const StyledView = styled(View);
+const StyledText = styled(Text);
 
 const Demo: FC = () => {
   const [count, setCount] = useState(0);
@@ -15,10 +20,10 @@ const Demo: FC = () => {
   }, []);
 
   return (
-    <View>
-      <Text>{count}</Text>
-    </View>
+    <StyledView>
+      <StyledText className="text-red-600">{count}</StyledText>
+    </StyledView>
   );
 };
 
-export default Demo;
+export default withExpoSnack(Demo);
